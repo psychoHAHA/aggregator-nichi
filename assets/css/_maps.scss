@@ -1,0 +1,34 @@
+// $grid-breakpoints: (
+// 	xs: 0,
+// 	sm: 576px,
+// 	md: 768px,
+// 	lg: 1100px,
+// 	xl: 1400px,
+// 	xxl: 1600px,
+// );
+$grid-breakpoints: map-merge(
+	$grid-breakpoints,
+	(
+		xxl: 1800px,
+	)
+);
+
+$container-max-widths: map-merge(
+	$container-max-widths,
+	(
+		// 		sm: 576px,
+		// 		md: 722px,
+		// 		lg: 1072px,
+		lg: 1020px,
+		xl: 1280px,
+		xxl: 1920px,
+		// 		xxl: 1712px,
+	)
+);
+$theme-colors: map-merge(
+	$theme-colors,
+	(
+		black: $black,
+		white: $white,
+	)
+);

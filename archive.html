@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="shortcut icon"
+      type="image/jpg"
+      href="{{ get_variable('favicon') }}"
+    />
+
+    <link
+      rel="preload"
+      href="https://fonts.gstatic.com/s/inter/v20/UcCo3FwrK3iLTcvvYwYL8g.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="https://fonts.gstatic.com/s/inter/v20/UcCo3FwrK3iLTcvmYwYL8g.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="https://fonts.gstatic.com/s/inter/v20/UcCo3FwrK3iLTcvsYwYL8g.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="https://fonts.gstatic.com/s/inter/v20/UcCo3FwrK3iLTcviYwY.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="shortcut icon"
+      type="image/jpg"
+      href="{{ get_variable('favicon') }}"
+    />
+    <link rel="stylesheet" href="assets/css/vendors/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="assets/css/vendors/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/dev.css" />
+    <script src="assets/js/vendors/vgmodals.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <section class="section section--first blog archive">
+        <div class="container">
+          <div class="section__header center">
+            <div class="breadcrumbs">
+              <a href="" class="breadcrumbs__link">Главная</a>
+              <span class="breadcrumbs__link current">Блог</span>
+            </div>
+            <h1 class="section__title fs-28 fs-md-40 fs-xl-44 fs-xl-56 fs-xxl-64 text-uppercase">Блог</h1>
+          </div>
+
+          <div class="blog__container">
+            <div class="blog__grid">
+              <a href="" class="blog__slide swiper-slide">
+                <div class="blog__slide-image">
+                  <div class="blog__slide-date">05.09.2025</div>
+                  <img src="assets/img/interior/item-7.jpg" alt="" />
+                </div>
+                <div class="blog__slide-content">
+                  <div class="blog__slide-row">
+                    <div class="blog__slide-icon blog__slide-icon--clock">
+                      5 мин
+                    </div>
+                    <div class="blog__slide-icon blog__slide-icon--views">
+                      75
+                    </div>
+                  </div>
+                  <div class="blog__slide-title">
+                    Почему в Италии так важны простые ингредиенты
+                  </div>
+                  <div class="blog__slide-text section-text">
+                    Оливковое масло, томаты, сыр и немного терпения —
+                    рассказываем, как простота превращается во вкус.
+                  </div>
+                  <div class="blog__slide-button">Читать</div>
+                </div>
+              </a>
+              <a href="" class="blog__slide swiper-slide">
+                <div class="blog__slide-image">
+                  <div class="blog__slide-date">05.09.2025</div>
+                  <img src="assets/img/interior/item-7.jpg" alt="" />
+                </div>
+                <div class="blog__slide-content">
+                  <div class="blog__slide-row">
+                    <div class="blog__slide-icon blog__slide-icon--clock">
+                      5 мин
+                    </div>
+                    <div class="blog__slide-icon blog__slide-icon--views">
+                      75
+                    </div>
+                  </div>
+                  <div class="blog__slide-title">
+                    Почему в Италии так важны простые ингредиенты
+                  </div>
+                  <div class="blog__slide-text section-text">
+                    Оливковое масло, томаты, сыр и немного терпения —
+                    рассказываем, как простота превращается во вкус.
+                  </div>
+                  <div class="blog__slide-button">Читать</div>
+                </div>
+              </a>
+              <a href="" class="blog__slide swiper-slide">
+                <div class="blog__slide-image">
+                  <div class="blog__slide-date">05.09.2025</div>
+                  <img src="assets/img/interior/item-7.jpg" alt="" />
+                </div>
+                <div class="blog__slide-content">
+                  <div class="blog__slide-row">
+                    <div class="blog__slide-icon blog__slide-icon--clock">
+                      5 мин
+                    </div>
+                    <div class="blog__slide-icon blog__slide-icon--views">
+                      75
+                    </div>
+                  </div>
+                  <div class="blog__slide-title">
+                    Почему в Италии так важны простые ингредиенты
+                  </div>
+                  <div class="blog__slide-text section-text">
+                    Оливковое масло, томаты, сыр и немного терпения —
+                    рассказываем, как простота превращается во вкус.
+                  </div>
+                  <div class="blog__slide-button">Читать</div>
+                </div>
+              </a>
+            </div>
+
+            <div class="pagination">
+              <a class="pagination__link prev" disabled></a>
+              <a class="pagination__link number current">1</a>
+              <a class="pagination__link number">2</a>
+              <a class="pagination__link number">3</a>
+              <a class="pagination__link number" disabled>...</a>
+              <a class="pagination__link number">10</a>
+              <a class="pagination__link next"></a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="modal modal--reviews" data-modal="modalReviews">
+      <div class="modal-window">
+        <button
+          type="button"
+          class="modal-close"
+          data-modal-close="modalReviews"
+        ></button>
+        <div class="modal__reviews-content" data-reviews-modal-content></div>
+      </div>
+    </div>
+
+    <script src="assets/js/vendors/jquery.min.js"></script>
+    <script src="assets/js/vendors/jquery.fancybox.min.js"></script>
+    <script src="assets/js/vendors/jquery.marquee.min.js"></script>
+    <script src="assets/js/vendors/swiper-bundle.min.js"></script>
+    <script src="assets/js/vendors/jquery.validate.min.js"></script>
+    <script src="assets/js/vendors/jquery.inputmask.min.js"></script>
+    <!-- <script src="js/vendors/popper.min.js"></script> -->
+    <script src="assets/js/vendors/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/vendors/callback.js" type="module"></script>
+    <script src="assets/js/script.js" type="module"></script>
+    <script src="assets/js/backend.js"></script>
+  </body>
+</html>

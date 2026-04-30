@@ -1,0 +1,30 @@
+@font-face {
+	font-family: "Cygre";
+	src: url("Cygre-Book.woff2") format("woff2"), url("Cygre-Book.woff") format("woff");
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+
+	ascent-override: 90%;
+	descent-override: 10%;
+}
+@font-face {
+	font-family: "Cygre";
+	src: url("Cygre-Regular.woff2") format("woff2"), url("Cygre-Regular.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+
+	ascent-override: 90%;
+	descent-override: 10%;
+}
+@font-face {
+	font-family: "Cygre";
+	src: url("Cygre-Medium.woff2") format("woff2"), url("Cygre-Medium.woff") format("woff");
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+
+	ascent-override: 90%;
+	descent-override: 10%;
+}

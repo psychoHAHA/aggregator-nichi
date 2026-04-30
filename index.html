@@ -1,0 +1,1032 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="shortcut icon"
+      type="image/jpg"
+      href="{{ get_variable('favicon') }}"
+    />
+
+    <link
+      rel="preload"
+      href="https://fonts.gstatic.com/s/inter/v20/UcCo3FwrK3iLTcvvYwYL8g.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="https://fonts.gstatic.com/s/inter/v20/UcCo3FwrK3iLTcvmYwYL8g.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="https://fonts.gstatic.com/s/inter/v20/UcCo3FwrK3iLTcvsYwYL8g.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="https://fonts.gstatic.com/s/inter/v20/UcCo3FwrK3iLTcviYwY.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="shortcut icon"
+      type="image/jpg"
+      href="{{ get_variable('favicon') }}"
+    />
+    <link rel="stylesheet" href="assets/css/vendors/daterangepicker.min.css" />
+    <link rel="stylesheet" href="assets/css/vendors/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/vendors/jquery.fancybox.min.css" />
+    <link
+      rel="stylesheet"
+      href="assets/css/vendors/locomotive-scroll.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="assets/js/vendors/vgmodals.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <a href="/" class="header__logo">
+            <img
+              src="/assets/img/logo.png"
+              alt=""
+            />
+          </a>
+     
+          <div class="header__modal modal fade" id="mobile-menu">
+            <div class="modal-dialog modal-fullscreen">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <div class="header__main">
+                    <div class="header__info">
+                      <div class="header__info-item">
+                        <div class="header__info-item-name">Адрес</div>
+                        <div class="header__info-item-value">
+    
+                        </div>
+                      </div>
+                      <div class="header__info-item">
+                        <div class="header__info-item-name">Режим работы</div>
+                        <div class="header__info-item-value">
+
+                        </div>
+                      </div>
+                    </div>
+                    <div class="header__actions">
+                      <a
+                        class="btn btn-dark d-lg-none btn-calc-modal"
+                        data-fancybox
+                        href="#popup-order"
+                        >Рассчитать стоимость</a
+                      >
+                      <a
+                        class="btn btn-outline-primary"
+                        data-fancybox
+                        href="#popup-recall"
+                        >Обратный звонок</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="header__mobile-actions">
+            <a
+              class="header__mobile-racall btn btn-primary"
+              href="@include(get_view('only-telephone'), ['telephone' => get_variable('telephone')])"
+            ></a>
+            <button
+              class="header__mobile-toggler btn btn-outline-primary"
+              data-bs-target="#mobile-menu"
+              data-bs-toggle="modal"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <section class="section intro">
+        <h1
+          class="intro__title fs-28 fs-md-40 fs-xl-44 fs-xl-56 fs-xxl-64 text-uppercase"
+          data-animate-text=""
+        >
+          Уют и изысканность — идеальное место для вашего дня
+        </h1>
+        <div class="intro__text-content" data-animation-fadein="">
+          <div class="intro__text">
+            Добро пожаловать в наш ресторан, где каждый уголок создан для вашего
+            комфорта и наслаждения. Откройте для себя изысканные сочетания
+            уютной атмосферы, изысканных блюд и безупречного сервиса.
+          </div>
+          <div class="intro__btn">
+            <a class="btn btn-outline-primary" href="#bid-popup" data-fancybox
+              >Забронировать стол</a
+            >
+          </div>
+        </div>
+        <div class="intro__image">
+          <div class="overflow-hidden">
+            <div
+              class="intro-banner"
+              style="
+                background-image: url(&quot;/assets/img/intro/bg.jpg&quot;);
+              "
+            >
+              <div class="intro-banner__image">
+                <img src="/assets/img/intro/image.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <script type="module">
+        const storyPreview = "/assets/img/interior/item-3.jpg"
+        const storyImage1 = "/assets/img/interior/item-1.jpg"
+        const storyAvatar = "/assets/img/interior/item-2.jpg"
+
+        window.__REELS_MOCK__ = [
+          {
+            id: "reel-1",
+            title: "Семейный ужин",
+            avatar: storyAvatar,
+            preview: storyPreview,
+            buttonText: "Написать нам",
+            buttonLink: "https://t.me/durov",
+            buttonHasLink: 1,
+            items: [
+              { src: storyImage1, duration: 5000000 },
+              { src: storyImage1, duration: 5000 },
+            ],
+          },
+          {
+            id: "reel-2",
+            title: "Тепло, вкусно, по-семейному",
+            avatar: storyAvatar,
+            preview: storyPreview,
+            buttonText: "Забронировать стол",
+            buttonLink: "",
+            buttonHasLink: 0,
+            items: [{ src: storyImage1, duration: 5000000 }],
+          },
+          {
+            id: "reel-3",
+            title: "Тепло, вкусно, по-семейному",
+            avatar: storyAvatar,
+            preview: storyPreview,
+            buttonText: "Написать нам",
+            buttonLink: "https://t.me/durov",
+            buttonHasLink: 1,
+            items: [{ src: storyImage1, duration: 5000 }],
+          },
+          {
+            id: "reel-5",
+            title: "Тепло, вкусно, по-семейному",
+            avatar: storyImage1,
+            preview: storyPreview,
+            buttonText: "Забронировать стол",
+            buttonLink: "",
+            buttonHasLink: 0,
+            items: [{ src: storyImage1, duration: 5000 }],
+          },
+          {
+            id: "reel-6",
+            title: "Тепло, вкусно, по-семейному",
+            avatar: storyImage1,
+            preview: storyPreview,
+            buttonText: "Забронировать стол",
+            buttonLink: "",
+            buttonHasLink: 0,
+            items: [{ src: storyImage1, duration: 5000 }],
+          },
+          {
+            id: "reel-7",
+            title: "Тепло, вкусно, по-семейному",
+            avatar: storyImage1,
+            preview: storyPreview,
+            buttonText: "Забронировать стол",
+            buttonLink: "",
+            buttonHasLink: 0,
+            items: [{ src: storyImage1, duration: 5000 }],
+          },
+          {
+            id: "reel-8",
+            title: "Тепло, вкусно, по-семейному",
+            avatar: storyImage1,
+            preview: storyPreview,
+            buttonText: "Забронировать стол",
+            buttonLink: "",
+            buttonHasLink: 0,
+            items: [{ src: storyImage1, duration: 5000 }],
+          },
+          {
+            id: "reel-9",
+            title: "Тепло, вкусно, по-семейному",
+            avatar: storyImage1,
+            preview: storyPreview,
+            buttonText: "Забронировать стол",
+            buttonLink: "",
+            buttonHasLink: 0,
+            items: [{ src: storyImage1, duration: 5000 }],
+          },
+          {
+            id: "reel-10",
+            title: "Тепло, вкусно, по-семейному",
+            avatar: storyImage1,
+            preview: storyPreview,
+            buttonText: "Забронировать стол",
+            buttonLink: "",
+            buttonHasLink: 0,
+            items: [{ src: storyImage1, duration: 5000 }],
+          },
+          {
+            id: "reel-11",
+            title: "Тепло, вкусно, по-семейному",
+            avatar: storyImage1,
+            preview: storyPreview,
+            buttonText: "Забронировать стол",
+            buttonLink: "",
+            buttonHasLink: 0,
+            items: [{ src: storyImage1, duration: 5000 }],
+          },
+        ]
+      </script>
+
+      <section class="reels section-reels">
+        <div class="container-reels">
+          <div class="swiper-shell" data-swiper="reels">
+            <div class="swiper">
+              <div class="swiper-wrapper" data-reels-preview-wrapper>
+                <template>
+                  <div class="swiper-slide" data-reels-preview-trigger>
+                    <div class="reels__item">
+                      <div class="reels__preview">
+                        <img
+                          data-reel="preview"
+                          data-reel-attr="src"
+                          alt="Рилс"
+                          loading="lazy"
+                        />
+                      </div>
+                      <div class="reels__description" data-reel="title"></div>
+                    </div>
+                  </div>
+                </template>
+              </div>
+            </div>
+            <div class="swiper-buttons section__head-actions">
+              <button
+                class="swiper-btn swiper-btn-reels-prev swiper-button-prev"
+                type="button"
+              ></button>
+              <button
+                class="swiper-btn swiper-btn-reels-next swiper-button-next"
+                type="button"
+              ></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="reels-modal" data-modal="reels">
+        <button class="reels-modal__close" data-modal-close="reels"></button>
+        <div class="reels-modal__block">
+          <div class="swiper" data-swiper="reels-modal">
+            <div class="swiper-wrapper" data-reels-modal-wrapper>
+              <template>
+                <div class="swiper-slide">
+                  <div data-reel="buttonHasLink" data-reel-attr="data-has-link">
+                    <div class="reels-modal__item">
+                      <div class="reels-modal__header">
+                        <div
+                          class="reels-modal__bars"
+                          data-reel-progress-bars
+                        ></div>
+                        <div class="reels-modal__title">
+                          <div class="" data-reel="title"></div>
+                        </div>
+                      </div>
+                      <div class="reels-modal__contents" data-reel-medias></div>
+                      <div class="reels-modal__nav">
+                        <button
+                          type="button"
+                          class="reels-modal__nav-zone reels-modal__nav-zone--prev"
+                          data-reels-nav="prev"
+                        ></button>
+                        <button
+                          type="button"
+                          class="reels-modal__nav-zone reels-modal__nav-zone--next"
+                          data-reels-nav="next"
+                        ></button>
+                      </div>
+                    </div>
+                    <a
+                      data-reel="buttonLink"
+                      data-reel-attr="href"
+                      target="_blank"
+                      rel="nofollow noindex"
+                      class="btn btn-primary button button--arrow reels-modal__button"
+                    >
+                      <span data-reel="buttonText">asdsad</span>
+                    </a>
+                    <button
+                      class="btn btn-primary button button--arrow reels-modal__button"
+                      data-close-reels
+                      data-modal-id="table"
+                      data-reel="buttonText"
+                    >
+                      asdasdas
+                    </button>
+                  </div>
+                </div>
+              </template>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="section section-wrapper concept" id="concept">
+        <div class="concept__container">
+          <div class="concept__image">
+            <img src="assets/img/logo.png" alt="" />
+          </div>
+          <div class="concept__content">
+            <div class="section__header center">
+              <h2
+                class="section__title fs-28 fs-md-40 fs-xl-44 fs-xl-44 text-uppercase"
+              >
+                Место, где семья становится ещё ближе
+              </h2>
+              <span class="section__text"
+                >Уникальный гастрономический опыт, наполненный эмоциями и
+                страстью, дарит незабываемые моменты.</span
+              >
+            </div>
+
+            <div class="concept__text">
+              <p>
+                AMOR — это пространство, созданное для неспешных встреч, особых
+                вечеров и моментов, которые хочется запомнить. Здесь
+                всё продумано так, чтобы гость чувствовал себя комфортно
+                с первых минут — от мягкого света и спокойной музыки
+                до внимательного, но ненавязчивого сервиса.
+              </p>
+            </div>
+          </div>
+          <button class="btn btn-primary concept__button">
+            <span>Забронировать стол</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="section section-wrapper info" id="kitchen">
+        <div class="info__container">
+          <div class="info__slider-wrapper">
+            <div class="info__slider swiper">
+              <div class="info__slider-pagination"></div>
+              <div class="swiper-wrapper">
+                <div class="info__slide swiper-slide">
+                  <div class="info__slide-image">
+                    <img src="assets/img/interior/item-3.jpg" alt="" />
+                  </div>
+                </div>
+                <div class="info__slide swiper-slide">
+                  <div class="info__slide-image">
+                    <img src="assets/img/interior/item-3.jpg" alt="" />
+                  </div>
+                </div>
+                <div class="info__slide swiper-slide">
+                  <div class="info__slide-image">
+                    <img src="assets/img/interior/item-3.jpg" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slider-button-container section__head-actions">
+              <button
+                class="slider-button info__button--prev swiper-button-prev"
+              ></button>
+              <button
+                class="slider-button info__button--next swiper-button-next"
+              ></button>
+            </div>
+          </div>
+          <div class="info__content">
+            <div class="section__header start">
+              <h2
+                class="section__title fs-28 fs-md-40 fs-xl-44 fs-xl-44 text-uppercase"
+              >
+                Понятно, вкусно и по‑домашнему
+              </h2>
+            </div>
+            <div class="section__text">
+              <span>
+                В нашем меню гармонично сочетаются европейская классика
+                и любимые домашние рецепты. Мы используем только свежие
+                фермерские продукты, сохраняя идеальный баланс между пользой
+                и насыщенным вкусом. А для самых маленьких гостей разработано
+                специальное детское меню — красивое, сбалансированное и очень
+                аппетитное.
+              </span>
+            </div>
+            <button
+              class="btn btn-primary btn-calc-modal info__button"
+              data-modal-id="modalBooking"
+              data-modal-source="Главный экран: о кухне"
+            >
+              <span>Бесплатная консультация</span>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="section section-wrapper info" id="rooms">
+        <div class="info__container">
+          <div class="info__slider-wrapper">
+            <div class="info__slider swiper">
+              <div class="info__slider-pagination"></div>
+              <div class="swiper-wrapper">
+                <div class="info__slide swiper-slide">
+                  <div class="info__slide-image">
+                    <img src="assets/img/interior/item-3.jpg" alt="" />
+                  </div>
+                </div>
+                <div class="info__slide swiper-slide">
+                  <div class="info__slide-image">
+                    <img src="assets/img/interior/item-3.jpg" alt="" />
+                  </div>
+                </div>
+                <div class="info__slide swiper-slide">
+                  <div class="info__slide-image">
+                    <img src="assets/img/interior/item-3.jpg" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slider-button-container section__head-actions">
+              <button
+                class="slider-button info__button--prev swiper-button-prev"
+              ></button>
+              <button
+                class="slider-button info__button--next swiper-button-next"
+              ></button>
+            </div>
+          </div>
+
+          <div class="info__content">
+            <div class="section__header start">
+              <h2
+                class="section__title fs-28 fs-md-40 fs-xl-44 fs-xl-44 text-uppercase"
+              >
+                Пространство для любого повода и отдыха
+              </h2>
+            </div>
+            <div class="section__text">
+              <span>
+                Мы продумали зонирование ресторана так, чтобы комфортно было
+                всем: и большим шумным компаниям, и тем, кто хочет поужинать
+                в тишине у панорамного окна.
+              </span>
+            </div>
+            <button
+              class="btn btn-primary info__button"
+              data-modal-id="modalBooking"
+              data-modal-source="Главный экран: залы ресторана"
+            >
+              <span>Забронировать стол</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section app" id="app">
+        <div class="app__container">
+          <div class="app__left">
+            <div class="app__image">
+              <img src="assets/img/phone.webp" alt="" />
+            </div>
+          </div>
+          <div class="app__content">
+            <div class="app__column">
+              <h2
+                class="section__title fs-28 fs-md-40 fs-xl-44 fs-xl-44 text-uppercase"
+              >
+                ПРИВИЛЕГИИ РЕСТОРАНА В ВАШЕМ СМАРТФОНЕ
+              </h2>
+              <span class=""
+                >Скачайте наше приложение, чтобы легко бронировать лучшие
+                панорамные столики и заказывать изысканные блюда домой.
+                Участвуйте в премиальной программе лояльности: копите баллы
+                с каждого визита и получайте персональные приглашения на детские
+                мастер-классы и гастроужины.</span
+              >
+            </div>
+
+            <div class="app__bottom">
+              <div class="app__qr">
+                <img src="assets/img/qr.svg" alt="" />
+              </div>
+              <div class="app__bottom-column">
+                <span class="app__bottom-title"
+                  >Скачивайте и устанавливайте</span
+                >
+                <div class="app__links">
+                  <a
+                    href=""
+                    class="app__link"
+                    target="_blank"
+                    rel="nofollow noindex"
+                  >
+                    <div class="app__link-image">
+                      <img src="assets/img/appstore.svg" alt="App Store" />
+                    </div>
+                  </a>
+                  <a
+                    href=""
+                    class="app__link"
+                    target="_blank"
+                    rel="nofollow noindex"
+                  >
+                    <div class="app__link-image">
+                      <img src="assets/img/googleplay.svg" alt="Google Play" />
+                    </div>
+                  </a>
+                  <a
+                    href=""
+                    class="app__link"
+                    target="_blank"
+                    rel="nofollow noindex"
+                  >
+                    <div class="app__link-image">
+                      <img src="assets/img/appgallery.svg" alt="AppGallery" />
+                    </div>
+                  </a>
+                  <a
+                    href=""
+                    class="app__link"
+                    target="_blank"
+                    rel="nofollow noindex"
+                  >
+                    <div class="app__link-image">
+                      <img src="assets/img/rustore.svg" alt="RuStore" />
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section reviews section-wrapper" id="reviews">
+        <div class="section__header center">
+          <h2
+            class="section__title fs-28 fs-md-40 fs-xl-44 fs-xl-44 text-uppercase"
+          >
+            Отзывы довольных клиентов
+          </h2>
+        </div>
+
+        <div class="reviews__content">
+          <div class="reviews__top">
+            <div class="reviews__total">
+              <span class="reviews__total-rating star"> 4.7 </span>
+              <span class="reviews__total-text">300 отзывов</span>
+            </div>
+
+            <div class="reviews__links">
+              <a class="reviews__link" href="">
+                <div class="reviews__link-image">
+                  <img src="assets/img/2gis.svg" alt="2ГИС" />
+                </div>
+                <span class="reviews__link-rating star">4.7</span>
+              </a>
+              <a class="reviews__link" href="">
+                <div class="reviews__link-image">
+                  <img src="assets/img/2gis.svg" alt="Google" />
+                </div>
+                <span class="reviews__link-rating star">4.7</span>
+              </a>
+              <a class="reviews__link" href="">
+                <div class="reviews__link-image">
+                  <img src="assets/img/2gis.svg" alt="Google" />
+                </div>
+                <span class="reviews__link-rating star">4.7</span>
+              </a>
+              <a class="reviews__link" href="">
+                <div class="reviews__link-image">
+                  <img src="assets/img/2gis.svg" alt="Otzovik" />
+                </div>
+                <span class="reviews__link-rating star">4.7</span>
+              </a>
+            </div>
+          </div>
+          <div class="reviews__container">
+            <div class="reviews__slider swiper">
+              <div class="swiper-wrapper">
+                <div class="reviews__slide swiper-slide" data-transfer-item>
+                  <div
+                    class="reviews__slide-top"
+                    data-transfer-text="reviewsSlideTop"
+                  >
+                    <div class="reviews__slide-profile">
+                      <img src="assets/img/avatar.webp" alt="" />
+                    </div>
+                    <div class="reviews__slide-person">
+                      <span class="reviews__slide-name">Иванов Иван</span>
+                      <div class="reviews__slide-row">
+                        <div class="reviews__slide-rating">
+                          <span class="star"></span>
+                          <span class="star"></span>
+                          <span class="star"></span>
+                          <span class="star"></span>
+                          <span class="star"></span>
+                        </div>
+                        <span class="reviews__slide-date">16.01.2026</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="reviews__slide-content">
+                    <span
+                      class="reviews__slide-text"
+                      data-transfer-text="reviewsSlideContent"
+                    >
+                      Ребята работали очень профессионально, быстро и аккуратно.
+                      Отдельно хочу отметить высокое качество материалов — оно
+                      превзошло все мои ожидания. Очень доволен результатом и
+                      смело рекомендую!
+                    </span>
+                  </div>
+                  <div
+                    class="reviews__slide-button"
+                    data-modal-id="modalReviews"
+                  >
+                    Читать полностью
+                  </div>
+                </div>
+                <div class="reviews__slide swiper-slide" data-transfer-item>
+                  <div
+                    class="reviews__slide-top"
+                    data-transfer-text="reviewsSlideTop"
+                  >
+                    <div class="reviews__slide-profile">
+                      <img src="assets/img/gallery/item-1.webp" alt="" />
+                    </div>
+                    <div class="reviews__slide-person">
+                      <span class="reviews__slide-name">Иванов Иван</span>
+                      <div class="reviews__slide-row">
+                        <div class="reviews__slide-rating">
+                          <span class="star"></span>
+                          <span class="star"></span>
+                          <span class="star"></span>
+                          <span class="star"></span>
+                          <span class="star"></span>
+                        </div>
+                        <span class="reviews__slide-date">16.01.2026</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="reviews__slide-content">
+                    <span
+                      class="reviews__slide-text"
+                      data-transfer-text="reviewsSlideContent"
+                    >
+                      Здесь собраны впечатления гостей, которые уже провели
+                      у нас уютные вечера, попробовали наши блюда и поделились.
+                    </span>
+                  </div>
+                  <div
+                    class="reviews__slide-button"
+                    data-modal-id="modalReviews"
+                  >
+                    Читать полностью
+                  </div>
+                </div>
+                <div class="reviews__slide swiper-slide" data-transfer-item>
+                  <div
+                    class="reviews__slide-top"
+                    data-transfer-text="reviewsSlideTop"
+                  >
+                    <div class="reviews__slide-profile">
+                      <img src="assets/img/avatar.webp" alt="" />
+                    </div>
+                    <div class="reviews__slide-person">
+                      <span class="reviews__slide-name">Иванов Иван</span>
+                      <div class="reviews__slide-row">
+                        <div class="reviews__slide-rating">
+                          <span class="star"></span>
+                          <span class="star"></span>
+                          <span class="star"></span>
+                          <span class="star"></span>
+                          <span class="star"></span>
+                        </div>
+                        <span class="reviews__slide-date">16.01.2026</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="reviews__slide-content">
+                    <span
+                      class="reviews__slide-text"
+                      data-transfer-text="reviewsSlideContent"
+                    >
+                      Здесь собраны впечатления гостей, которые уже провели
+                      у нас уютные вечера, попробовали наши блюда и поделились
+                      своими эмоциями от кухни, сервиса и атмосферы. Касательно
+                      еды всё разнообразно и каждое блюдо было хорошо по своему,
+                      официант сможет посоветовать блюдо по вашему вкусу.
+                    </span>
+                  </div>
+                  <div
+                    class="reviews__slide-button"
+                    data-modal-id="modalReviews"
+                  >
+                    Читать полностью
+                  </div>
+                </div>
+                <div class="reviews__slide swiper-slide" data-transfer-item>
+                  <div
+                    class="reviews__slide-top"
+                    data-transfer-text="reviewsSlideTop"
+                  >
+                    <div class="reviews__slide-profile">
+                      <img src="assets/img/gallery/item-1.webp" alt="" />
+                    </div>
+                    <div class="reviews__slide-person">
+                      <span class="reviews__slide-name">Иванов Иван</span>
+                      <div class="reviews__slide-row">
+                        <div class="reviews__slide-rating">
+                          <span class="star"></span>
+                          <span class="star"></span>
+                          <span class="star"></span>
+                          <span class="star"></span>
+                          <span class="star"></span>
+                        </div>
+                        <span class="reviews__slide-date">16.01.2026</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="reviews__slide-content">
+                    <span
+                      class="reviews__slide-text"
+                      data-transfer-text="reviewsSlideContent"
+                    >
+                      Здесь собраны впечатления гостей, которые уже провели
+                      у нас уютные вечера, попробовали наши блюда и поделились.
+                    </span>
+                  </div>
+                  <div
+                    class="reviews__slide-button"
+                    data-modal-id="modalReviews"
+                  >
+                    Читать полностью
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slider-button-container">
+          <button
+            class="slider-button reviews__button--prev swiper-button-prev"
+          ></button>
+          <button
+            class="slider-button reviews__button--next swiper-button-next"
+          ></button>
+        </div>
+      </section>
+
+      <section class="section section-wrapper blog">
+        <div class="section__header center">
+          <h2
+            class="section__title fs-28 fs-md-40 fs-xl-44 fs-xl-44 text-uppercase"
+          >
+            О кухне, вкусе и традициях
+          </h2>
+          <span
+            >Здесь вы найдёте статьи о нашей философии, подходе к приготовлению
+            блюд и итальянской гастрономии.</span
+          >
+        </div>
+
+        <div class="blog__container">
+          <div class="blog__slider swiper">
+            <div class="swiper-wrapper">
+              <a href="" class="blog__slide swiper-slide">
+                <div class="blog__slide-image">
+                  <div class="blog__slide-date">05.09.2025</div>
+                  <img src="assets/img/interior/item-7.jpg" alt="" />
+                </div>
+                <div class="blog__slide-content">
+                  <div class="blog__slide-row">
+                    <div class="blog__slide-icon blog__slide-icon--clock">
+                      5 мин
+                    </div>
+                    <div class="blog__slide-icon blog__slide-icon--views">
+                      75
+                    </div>
+                  </div>
+                  <div class="blog__slide-title">
+                    Почему в Италии так важны простые ингредиенты
+                  </div>
+                  <div class="blog__slide-text section-text">
+                    Оливковое масло, томаты, сыр и немного терпения —
+                    рассказываем, как простота превращается во вкус.
+                  </div>
+                  <div class="blog__slide-button">Читать</div>
+                </div>
+              </a>
+              <a href="" class="blog__slide swiper-slide">
+                <div class="blog__slide-image">
+                  <img src="assets/img/interior/item-7.jpg" alt="" />
+                </div>
+                <div class="blog__slide-content">
+                  <div class="blog__slide-row">
+                    <div class="blog__slide-icon blog__slide-icon--clock">
+                      5 мин
+                    </div>
+                    <div class="blog__slide-icon blog__slide-icon--views">
+                      75
+                    </div>
+                  </div>
+                  <div class="blog__slide-title">
+                    Почему в Италии так важны простые ингредиенты
+                  </div>
+                  <div class="blog__slide-text section-text">
+                    Оливковое масло, томаты, сыр и немного терпения —
+                    рассказываем, как простота превращается во вкус.
+                  </div>
+                  <div class="blog__slide-button">Читать</div>
+                </div>
+              </a>
+              <a href="" class="blog__slide swiper-slide">
+                <div class="blog__slide-image">
+                  <img src="assets/img/interior/item-7.jpg" alt="" />
+                </div>
+                <div class="blog__slide-content">
+                  <div class="blog__slide-row">
+                    <div class="blog__slide-icon blog__slide-icon--clock">
+                      5 мин
+                    </div>
+                    <div class="blog__slide-icon blog__slide-icon--views">
+                      75
+                    </div>
+                  </div>
+                  <div class="blog__slide-title">
+                    Почему в Италии так важны простые ингредиенты
+                  </div>
+                  <div class="blog__slide-text section-text">
+                    Оливковое масло, томаты, сыр и немного терпения —
+                    рассказываем, как простота превращается во вкус.
+                  </div>
+                  <div class="blog__slide-button">Читать</div>
+                </div>
+              </a>
+              <a href="" class="blog__slide swiper-slide">
+                <div class="blog__slide-image">
+                  <img src="assets/img/interior/item-7.jpg" alt="" />
+                </div>
+                <div class="blog__slide-content">
+                  <div class="blog__slide-row">
+                    <div class="blog__slide-icon blog__slide-icon--clock">
+                      5 мин
+                    </div>
+                    <div class="blog__slide-icon blog__slide-icon--views">
+                      75
+                    </div>
+                  </div>
+                  <div class="blog__slide-title">
+                    Почему в Италии так важны простые ингредиенты
+                  </div>
+                  <div class="blog__slide-text section-text">
+                    Оливковое масло, томаты, сыр и немного терпения —
+                    рассказываем, как простота превращается во вкус.
+                  </div>
+                  <div class="blog__slide-button">Читать</div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="slider-button-container">
+            <button
+              class="slider-button reviews__button--prev swiper-button-prev blog__button--prev"
+            ></button>
+            <button
+              class="slider-button reviews__button--next swiper-button-next blog__button--next"
+            ></button>
+          </div>
+          <a href="" class="btn btn-outline-primary blog__button">Все статьи</a>
+        </div>
+      </section>
+    </div>
+
+    <section class="section contacts">
+      <div class="section__header center">
+        <h2
+          class="section__title fs-28 fs-md-40 fs-xl-44 fs-xl-44 text-uppercase"
+        >
+          Будем рады вас видеть
+        </h2>
+      </div>
+
+      <div class="contacts__container">
+        <div class="contacts__grid">
+          <div class="contacts__item">
+            г. Тула, ул. Советская 47  ТЦ Гостиный двор 5 этаж
+          </div>
+          <div class="contacts__item contacts__item--time">
+            Ежедневно с 12:00 до 02:00
+          </div>
+          <div class="contacts__item">
+            <a href="">+7 (999) 999-99-99</a>
+            <a href="">example@mail.ru</a>
+          </div>
+
+          <div class="contacts__social">
+            <a href="" class="contacts__link contacts__link--vk"></a>
+            <a href="" class="contacts__link contacts__link--max"></a>
+            <a href="" class="contacts__link contacts__link--odn"></a>
+            <a href="" class="contacts__link contacts__link--rut"></a>
+          </div>
+          <div class="contacts__buttons">
+            <a class="btn btn-outline-primary">Проложить маршрут</a>
+            <a class="btn btn-primary">Вызвать такси</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="contacts__map" data-map>
+        <iframe
+          src="https://yandex.ru/map-widget/v1/?um=constructor%3A53a038103c120a743575f149fff6896a6d37cc8cc99aed4b14b5bb69e97d9b7f&amp;source=constructor"
+          width="100%"
+          height="642"
+          frameborder="0"
+        ></iframe>
+      </div>
+    </section>
+
+    <div class="modal modal--reviews" data-modal="modalReviews">
+      <div class="modal-window">
+        <button
+          type="button"
+          class="modal-close"
+          data-modal-close="modalReviews"
+        ></button>
+        <div class="modal__reviews-content" data-reviews-modal-content></div>
+      </div>
+    </div>
+
+    <script src="assets/js/vendors/jquery.min.js"></script>
+    <script src="assets/js/vendors/jquery.fancybox.min.js"></script>
+    <script src="assets/js/vendors/moment.min.js"></script>
+    <script src="assets/js/vendors/daterangepicker.min.js"></script>
+    <script src="assets/js/vendors/bootstrap.min.js"></script>
+    <script src="assets/js/vendors/swiper-bundle.min.js"></script>
+    <script src="assets/js/vendors/locomotive-scroll.min.js"></script>
+    <script src="assets/js/vendors/gsap.min.js"></script>
+    <script src="assets/js/vendors/ScrollTrigger.min.js"></script>
+    <script src="assets/js/vendors/ScrollSmoother.min.js"></script>
+    <script src="assets/js/vendors/SplitText.min.js"></script>
+    <script src="assets/js/vendors/imask.min.js"></script>
+    <script src="assets/js/vendors/jquery.inputmask.js"></script>
+    <script src="assets/js/vendors/jquery.validate.js"></script>
+    <script src="assets/js/script.js" type="module"></script>
+    <!-- <script src="assets/js/dev.js"></script> -->
+
+    <script>
+      window.themeSettings = {
+        cookieConsent: {
+          type: "row",
+          theme: "light",
+          showIcon: false,
+          showCloseButton: false,
+          showButtonReject: false,
+          positionX: "right",
+          positionY: "bottom",
+          cookieTitle: "Мы используем cookie",
+          cookieTextHTML: `<p>Во время посещения сайта вы соглашаетесь с тем, что мы обрабатываем ваши персональные данные с использованием метрических программ.</p>`,
+          buttonAcceptText: "Я согласен",
+          expireDays: 1,
+        },
+      }
+    </script>
+  </body>
+</html>

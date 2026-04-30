@@ -1,0 +1,69 @@
+@import url("./RG-Spacious/stylesheet.css");
+@import url("./Cygre/stylesheet.css");
+
+$enable-validation-icons: false;
+
+$font-family-base: "Cygre", var(--bs-font-sans-serif);
+$headings-font-family: "Random Grotesque Spacious", var(--bs-font-sans-serif);
+
+// $container-padding-x: 2rem;
+
+$black: #1e1e1e;
+// $grid-gutter-width: 0px;
+$border-color: #b2b3af;
+$body-bg: #edece6;
+$body-color: $black;
+
+$primary: #b8001e;
+$secondary: #b2b3af;
+
+$btn-font-size: 1.25rem;
+$btn-border-radius: 2px;
+$btn-line-height: 28/20;
+
+$btn-padding-x: 1.5rem;
+$btn-padding-y: 1rem;
+
+$line-height-base: 1.2;
+
+$input-bg: $body-bg;
+$input-border-radius: 0px;
+
+$form-floating-input-padding-t: 1.85rem;
+
+// $color-contrast-dark: #0d1c34;
+
+// $input-padding-y: 14px;
+// $input-padding-x: 16px;
+
+// // primary
+// $blue-dark: #0d1c34;
+// $blue: #1d314f;
+// $blue-light: #eaeef8;
+
+// $gold-dark: #966504;
+// $gold: #f1bf5b;
+// $gold-light: #ffe3ab;
+
+// $grey-light: #f5f4f3;
+// $white: #fff;
+// $black: #151517;
+
+// // secondary
+// $s-blue: #7fb2ff;
+// $s-blue-light: #d9e0f4;
+// $s-grey-light: #f0f3fb;
+
+// $accordion-bg: $grey-light;
+// $accordion-button-active-color: none;
+// $accordion-button-active-bg: none;
+// $accordion-border-width: 0;
+
+// $accordion-border-radius: 20px;
+// $accordion-padding-x: 20px;
+// $accordion-padding-y: 20px;
+
+// $accordion-icon-width: 32px;
+// $accordion-icon-transform: none;
+// $accordion-button-icon: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='32' height='32' rx='6' fill='%231D314F'/%3E%3Cpath d='M16 12.5V19.5M12.5 16H19.5' stroke='white' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+// $accordion-button-active-icon: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='32' height='32' rx='6' fill='%231D314F'/%3E%3Cpath d='M12.5 16H19.5' stroke='white' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
