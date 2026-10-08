@@ -41,7 +41,7 @@
   }
 
   &__total {
-    background: $primary;
+    background: $primary-color;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -134,7 +134,7 @@
         height: auto;
 
         @media (max-width: 767px) {
-          max-height: 0.8333333333rem;
+          max-height: 1.8333333333rem;
         }
       }
 
@@ -143,7 +143,7 @@
       }
 
       @media (max-width: 767px) {
-        height: 0.6666666667rem;
+        height: 1.6666666667rem;
       }
 
       .icon-yandex {
@@ -313,7 +313,7 @@
       font-size: 1rem;
       line-height: 1.2;
       font-weight: 400;
-      color: $primary;
+      color: $primary-color;
       text-decoration: underline;
       margin-top: auto;
     }

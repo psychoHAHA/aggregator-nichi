@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Random Grotesque Spacious';
+    src: url('RG-SpaciousRegular.woff2') format('woff2'),
+        url('RG-SpaciousRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

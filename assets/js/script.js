@@ -339,6 +339,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   if (reelsMock?.length) {
     setupReels(reelsMock, {
       previewSwiper: {
+        centerInsufficientSlides: true,
         slidesPerView: 4,
         spaceBetween: 12,
         breakpoints: {

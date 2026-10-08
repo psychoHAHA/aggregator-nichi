@@ -1,0 +1,84 @@
+:root {
+  /* --- Редактировать в CMS --- */
+  --primary: rgb(77, 12, 18);
+  --primary-rgb: 77, 12, 18;
+
+  --dark: rgb(48, 5, 14);
+  --dark-rgb: 48, 5, 14;
+
+  --light: #f5f3e4;
+  --light-rgb: 245, 243, 228;
+
+  --white: rgb(245, 243, 228);
+
+  /* --- Bootstrap (связки, не трогать) --- */
+  --bs-primary: var(--primary);
+  --bs-primary-rgb: var(--primary-rgb);
+  --bs-light: var(--light);
+  --bs-light-rgb: var(--light-rgb);
+  --bs-body-bg: var(--light);
+  --bs-body-bg-rgb: var(--light-rgb);
+}
+
+.btn-primary {
+  --bs-btn-color: var(--white);
+  --bs-btn-bg: var(--primary);
+  --bs-btn-border-color: var(--primary);
+  --bs-btn-hover-color: var(--white);
+  --bs-btn-hover-bg: var(--primary);
+  --bs-btn-hover-border-color: var(--primary);
+  --bs-btn-focus-shadow-rgb: var(--bs-primary-rgb);
+  --bs-btn-active-color: var(--white);
+  --bs-btn-active-bg: var(--primary);
+  --bs-btn-active-border-color: var(--primary);
+  --bs-btn-disabled-color: var(--white);
+  --bs-btn-disabled-bg: var(--primary);
+  --bs-btn-disabled-border-color: var(--primary);
+}
+
+.btn-outline-primary,
+.section__head-actions .swiper-button-prev,
+.section__head-actions .swiper-button-next {
+  --bs-btn-color: var(--primary);
+  --bs-btn-border-color: var(--primary);
+  --bs-btn-hover-color: var(--white);
+  --bs-btn-hover-bg: var(--primary);
+  --bs-btn-hover-border-color: var(--primary);
+  --bs-btn-focus-shadow-rgb: var(--bs-primary-rgb);
+  --bs-btn-active-color: var(--white);
+  --bs-btn-active-bg: var(--primary);
+  --bs-btn-active-border-color: var(--primary);
+  --bs-btn-disabled-color: var(--primary);
+  --bs-btn-disabled-border-color: var(--primary);
+}
+
+.btn-light {
+  --bs-btn-color: rgb(30, 16, 14);
+  --bs-btn-bg: var(--light);
+  --bs-btn-border-color: var(--light);
+  --bs-btn-hover-color: rgb(30, 16, 14);
+  --bs-btn-hover-border-color: var(--light);
+  --bs-btn-focus-shadow-rgb: var(--bs-light-rgb);
+  --bs-btn-active-color: rgb(30, 16, 14);
+  --bs-btn-active-bg: var(--light);
+  --bs-btn-active-border-color: var(--light);
+  --bs-btn-disabled-color: rgb(30, 16, 14);
+  --bs-btn-disabled-bg: var(--light);
+  --bs-btn-disabled-border-color: var(--light);
+}
+
+.btn-dark {
+  --bs-btn-color: var(--white);
+  --bs-btn-bg: var(--dark);
+  --bs-btn-border-color: var(--dark);
+  --bs-btn-hover-color: var(--white);
+  --bs-btn-hover-bg: var(--dark);
+  --bs-btn-hover-border-color: var(--dark);
+  --bs-btn-focus-shadow-rgb: var(--dark-rgb);
+  --bs-btn-active-color: var(--white);
+  --bs-btn-active-bg: var(--dark);
+  --bs-btn-active-border-color: var(--dark);
+  --bs-btn-disabled-color: var(--white);
+  --bs-btn-disabled-bg: var(--dark);
+  --bs-btn-disabled-border-color: var(--dark);
+}

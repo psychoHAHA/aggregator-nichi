@@ -15,11 +15,19 @@
     justify-content: space-between;
     margin: 0 auto 3.75rem;
     max-width: 100rem;
+    
+    @media (max-width: 1600px) {
+      padding: 0 40px;
+    }
 
     @media (max-width: 1199px) {
       flex-wrap: wrap;
       gap: 1rem;
       max-width: 40rem;
+    }
+
+    @media (max-width: 767px) {
+      padding: 0;
     }
   }
 
@@ -37,7 +45,7 @@
 
       @media (hover: hover) {
         &:hover {
-          color: $primary;
+          color: $primary-color;
         }
       }
     }
@@ -65,7 +73,7 @@
 
     @media (hover: hover) {
       &:hover {
-        border-color: $primary;
+        border-color: $primary-color;
       }
     }
 
